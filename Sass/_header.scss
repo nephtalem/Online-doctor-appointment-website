@@ -1,0 +1,171 @@
+
+header{
+    width: 100%;
+    padding: 1.5rem 0.5em;
+    gap: 2.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 0 4px 10 gray;
+    @include flexDisplay;
+    
+
+    .header-logo{
+        margin-right: 2em;
+        gap: 0.4em;
+        font-weight: 600;
+        @include flexDisplay;
+
+        .logo{
+            font-size: 2rem;
+            padding: 0 0.3125em;
+            box-shadow: 1px 1px 5px black;
+            color: blueviolet;
+            
+        }
+    }
+
+    .nav{
+        
+        &-menu{
+            list-style-type: none;
+            display: flex;
+            gap: 4em;
+            align-items: center;
+            justify-content: center;
+
+            &-list{
+                color: #9f9f9f;
+                text-decoration: none;
+                font-size: 0.8rem;
+                font-weight: 600;
+
+                &:hover{
+                    color: black;
+                    font-weight: 600;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .user-status{
+        display: flex;
+        gap:1em;
+        align-items: center;
+
+        p{
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .create-account{
+            border: 2px solid #cfcaca;
+            padding: 0.5em 1.5em;
+
+            a{
+                text-decoration: none;
+                color: blueviolet;
+            }
+        }
+    }
+
+    .menu-btn{
+        display: none;
+    }
+    .close-btn{
+        display: none;
+    }
+    
+}
+
+
+@media only screen and (min-width: 580px) and (max-width: 1024px) {
+     header{
+        flex-direction: column;
+        gap:1.2rem;
+        opacity: 0.8;
+        // position: relative;
+
+        .nav{
+        display: flex;
+       }
+
+    }
+
+    .menu-btn{
+        display: none;
+    }
+
+     
+}
+
+  @media only screen and (max-width: 580px) {
+     header{
+
+        width: 100%;
+        gap:1.2rem;
+        opacity: 0.8;
+        position: relative;
+        justify-content: space-evenly;
+
+        .menu-btn{
+            display: block;
+            margin-left: auto;
+            font-size: 1.5em;
+        }
+
+        .user-status{
+            display: none;
+          }
+        
+     }
+
+
+
+     .nav{
+        display: none;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column-reverse;
+        background-color: rgba(245, 245, 245, 0.6);
+
+        .nav-menu{
+            flex-direction: column;
+
+            &-list{
+                font-size: 1.5rem;
+                color: #272727;
+            }
+        }
+
+        
+        .close-btn{
+            display: none;
+            position: absolute;
+            right:1em;
+            top:2em;
+            font-size: 1.5em;
+        
+         }
+     }
+     
+     .header-logo{
+        margin-left: 1em;
+     }
+     
+    
+  }
+
+  .open{
+    display: block;
+  }
+
+  .open-flex{
+    display: flex;
+  }

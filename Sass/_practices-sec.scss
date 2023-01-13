@@ -1,0 +1,120 @@
+.practices-section{
+    padding: 5rem;
+
+    &-div{
+        max-width: 950px;
+        margin: 0 auto;
+
+        .menu{
+            display: flex;
+            align-items: center;
+            padding: 2em 0;
+
+            h3{
+                font-weight: 400;
+            }
+
+            &-list{
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                gap: 1em;
+                margin-right: 1em;
+                font-size: 14px;
+                flex-wrap: wrap;
+                
+                a{
+                    text-decoration: none;
+                    color: $lightgray-color;
+
+                    &:hover{
+                        transition: all 0.5s ease-in-out;
+                        color: black;
+                        font-weight: 600;
+                    }
+                }
+            }
+           
+        }
+
+        .cards-section{
+            display: flex;
+            justify-content: space-evenly;
+            gap:1em;
+            
+
+            .card{
+
+                border-radius: 5px;
+
+                &-img{
+                    width: 100%;
+                }
+
+                &-info{
+                    margin: 1em;
+
+                    h4{
+                        font-weight: 400;
+                        margin-bottom: 0.8em;
+                        max-width: 200px;
+                    }
+
+                    .location{
+                        font-size: 10px;
+                        color: $lightgray-color;
+                    }
+                }
+
+                &-footer{
+                    display: flex;
+                    padding: 1.5em 1.5em;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 12px;
+                    background-color: #f2ebfb;
+                    flex-wrap: wrap;
+
+                    .stars{
+                        color: gold;
+
+                        span{
+                            margin-left: 0.3em;
+                            color: $lightgray-color;
+                        }
+                    }
+                    
+                    .view-btn{
+                        padding: 0.7em 2.5em;
+                        background-color: white;
+                    }
+                }   
+            }
+        }
+    }
+}
+
+
+@media only screen  and (max-width:600px){
+    
+    .practices-section{
+        padding: 1.5rem;
+    }
+
+    .menu{
+        flex-direction: column;
+        gap:0.5rem;
+        
+
+        .fa-bars{
+            display: none;
+        }
+
+    }
+
+    .cards-section{
+        flex-direction: column;
+    }
+
+}

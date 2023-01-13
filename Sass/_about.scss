@@ -1,0 +1,83 @@
+.about-section{
+    padding: 4rem 0.5rem;
+    padding-bottom: 7rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+
+    h4{
+        margin-bottom: 1.3rem;
+    }
+    p{
+        font-size: 14px;
+        color: gray;
+    }
+
+    .about{
+
+        p{
+            margin-bottom: 0.5rem;
+        }
+
+        .social-icons{
+            padding: 0.5rem 0;
+
+            i{
+                font-size: 1.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .fa-facebook{
+                color: rgb(51, 71, 125);
+            }
+
+            .fa-square-twitter{
+                color: #1DA1F2;
+            }
+
+            .fa-google-plus{
+                color: #DB4437
+            }
+        }
+    }
+    
+    .info{
+        display: flex;
+        gap: 2.5rem;
+       
+
+        div{
+            
+            p{
+                margin-bottom: 0.5rem;
+            }
+        }
+        
+
+        
+    }
+
+}
+
+
+@media only screen  and (max-width:700px){
+    
+    .about-section{
+        border: 1px solid;
+        padding: 2rem 3rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about{
+        align-self: flex-start;
+    }
+    
+    .info{
+        align-self: flex-start;
+        flex-wrap: wrap;
+        gap:1rem
+    }
+
+}
